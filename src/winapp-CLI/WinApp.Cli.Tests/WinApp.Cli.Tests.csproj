@@ -40,6 +40,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <!-- The published sample-index contract (#703). SampleIndexTests reads it to assert the
+         schema we hand upstream and the reader/writer haven't drifted apart. -->
+    <Content Include="..\..\..\docs\winui-sample-index.schema.json"
+             Link="winui-sample-index.schema.json"
+             CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\WinApp.Cli\WinApp.Cli.csproj" />
     <ProjectReference Include="..\WinApp.Cli.Fuzz\WinApp.Cli.Fuzz.csproj" />
   </ItemGroup>
